@@ -22,12 +22,12 @@ const Header = () => {
           >
             Home
           </Link>
-          <a 
-            href="#centers" 
+          <Link 
+            to="/hospitals" 
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
           >
             Find Centers
-          </a>
+          </Link>
           <a 
             href="#faq" 
             className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"

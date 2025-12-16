@@ -408,19 +408,6 @@ export const ageGroups: AgeGroup[] = [
     ],
   },
   {
-    id: "pregnant-women",
-    title: "Pregnant Women",
-    shortTitle: "Pregnant Women",
-    description: "Safe vaccines during pregnancy that protect both mother and baby from serious infections.",
-    icon: "🤰",
-    vaccines: [
-      { name: "Td / TT", protectsAgainst: "Tetanus in mother and newborn", importance: "Prevents neonatal tetanus, a serious newborn disease" },
-      { name: "Tdap (Whooping Cough)", protectsAgainst: "Whooping cough in newborn", importance: "Passes antibodies to baby before birth" },
-      { name: "Influenza", protectsAgainst: "Flu complications during pregnancy", importance: "Pregnancy increases flu complication risk" },
-      { name: "COVID-19", protectsAgainst: "Severe COVID during pregnancy", importance: "Safe and recommended during pregnancy" },
-    ],
-  },
-  {
     id: "senior-citizens",
     title: "Senior Citizens (60+ Years)",
     shortTitle: "Senior Citizens",

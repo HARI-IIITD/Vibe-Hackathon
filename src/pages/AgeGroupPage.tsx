@@ -3,7 +3,7 @@ import { ageGroups } from "@/data/vaccineData";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import InterestForm from "@/components/InterestForm";
-import { ArrowLeft, Shield, CheckCircle, Info } from "lucide-react";
+import { ArrowLeft, Shield, CheckCircle, Info, MapPin } from "lucide-react";
 import {
   Dialog,
   DialogContent,
@@ -96,10 +96,17 @@ const AgeGroupPage = () => {
                           </p>
                         )}
                         {vaccine.importance && (
-                          <p className="text-sm text-primary/80 bg-accent/50 px-3 py-1.5 rounded-lg inline-block">
+                          <p className="text-sm text-primary/80 bg-accent/50 px-3 py-1.5 rounded-lg inline-block mb-2">
                             {vaccine.importance}
                           </p>
                         )}
+                        <Link
+                          to="/hospitals"
+                          className="inline-flex items-center gap-1.5 text-sm text-primary hover:underline mt-2"
+                        >
+                          <MapPin className="w-3.5 h-3.5" />
+                          Find a vaccination center
+                        </Link>
                       </div>
                     </div>
                   </div>
