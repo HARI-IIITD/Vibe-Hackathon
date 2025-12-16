@@ -15,7 +15,7 @@ interface SituationCardProps {
 const SituationCard = ({ group, index }: SituationCardProps) => {
   return (
     <div 
-      className="animate-fade-in"
+      className="animate-slide-up"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <Accordion type="single" collapsible>

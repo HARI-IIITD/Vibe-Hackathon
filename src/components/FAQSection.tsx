@@ -11,7 +11,7 @@ const FAQSection = () => {
   return (
     <section id="faq" className="py-16 px-6 bg-muted/30">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/50 mb-4">
             <HelpCircle className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-accent-foreground">Common Questions</span>

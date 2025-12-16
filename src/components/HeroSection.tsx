@@ -4,8 +4,8 @@ const HeroSection = () => {
   return (
     <section className="relative py-16 md:py-24 px-6 gradient-hero overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/5 blur-3xl" />
-      <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-accent/30 blur-3xl" />
+      <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/5 blur-3xl animate-pulse-soft" />
+      <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-accent/30 blur-3xl animate-pulse-soft" />
       
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
@@ -32,12 +32,12 @@ const HeroSection = () => {
 
           {/* Syringe Illustration */}
           <div className="flex-1 flex justify-center">
-            <div className="relative w-64 h-64 md:w-80 md:h-80">
+            <div className="relative w-64 h-64 md:w-80 md:h-80 animate-float">
               {/* Background circle */}
               <div className="absolute inset-0 rounded-full bg-accent/30" />
               
               {/* Syringe container */}
-              <div className="absolute inset-4 rounded-full bg-card shadow-soft flex items-center justify-center">
+              <div className="absolute inset-4 rounded-full bg-card shadow-soft flex items-center justify-center animate-syringe">
                 {/* Realistic Syringe SVG */}
                 <svg 
                   viewBox="0 0 100 100" 

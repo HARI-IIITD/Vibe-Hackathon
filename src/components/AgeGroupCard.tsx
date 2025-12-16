@@ -11,7 +11,7 @@ const AgeGroupCard = ({ group, index }: AgeGroupCardProps) => {
   return (
     <Link
       to={`/age/${group.id}`}
-      className="block group"
+      className="block group animate-slide-up"
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       <div className="card-hover bg-card rounded-2xl p-5 border border-border/50 gradient-card">

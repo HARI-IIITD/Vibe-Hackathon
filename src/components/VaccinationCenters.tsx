@@ -31,7 +31,7 @@ const VaccinationCenters = () => {
   return (
     <section id="centers" className="py-16 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-10">
+        <div className="text-center mb-10 animate-fade-in">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-accent/50 mb-4">
             <MapPin className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-accent-foreground">Find a Center</span>
@@ -45,7 +45,7 @@ const VaccinationCenters = () => {
         </div>
 
         {/* Search */}
-        <div className="max-w-md mx-auto mb-8">
+        <div className="max-w-md mx-auto mb-8 animate-fade-in" style={{ animationDelay: "0.1s" }}>
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
             <Input
@@ -59,7 +59,7 @@ const VaccinationCenters = () => {
         </div>
 
         {/* Area quick filters */}
-        <div className="flex flex-wrap gap-2 justify-center mb-8">
+        <div className="flex flex-wrap gap-2 justify-center mb-8 animate-fade-in" style={{ animationDelay: "0.2s" }}>
           <button
             onClick={() => setSearchTerm("")}
             className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
@@ -90,7 +90,8 @@ const VaccinationCenters = () => {
           {filteredHospitals.map((hospital, index) => (
             <div
               key={index}
-              className="bg-card rounded-2xl p-5 border border-border/50 card-hover"
+              className="bg-card rounded-2xl p-5 border border-border/50 card-hover animate-slide-up"
+              style={{ animationDelay: `${index * 0.03}s` }}
             >
               <h3 className="font-display font-semibold text-foreground mb-2 line-clamp-2">
                 {hospital.hospital_name}
