@@ -2,12 +2,25 @@ import { Shield, Heart } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative py-16 md:py-24 px-6 gradient-hero overflow-hidden">
+    <section className="relative py-16 md:py-24 px-6 overflow-hidden bg-background">
+      {/* Background video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/background/background.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+
+      {/* Overlay to keep text readable */}
+      <div className="absolute inset-0 bg-gradient-to-br from-background/85 via-background/80 to-background/88" />
+
       {/* Decorative elements */}
       <div className="absolute top-20 left-10 w-32 h-32 rounded-full bg-primary/5 blur-3xl animate-pulse-soft" />
       <div className="absolute bottom-10 right-10 w-40 h-40 rounded-full bg-accent/30 blur-3xl animate-pulse-soft" />
       
-      <div className="max-w-6xl mx-auto">
+      <div className="relative max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
           <div className="flex-1 text-center lg:text-left">
@@ -20,12 +33,12 @@ const HeroSection = () => {
             </p>
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.2s" }}>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/50 text-accent-foreground">
-                <Shield className="w-4 h-4" />
-                <span className="text-sm font-medium">Safe & Tested</span>
+                
+                
               </div>
               <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-accent/50 text-accent-foreground">
-                <Heart className="w-4 h-4" />
-                <span className="text-sm font-medium">Government Approved</span>
+               
+                
               </div>
             </div>
           </div>

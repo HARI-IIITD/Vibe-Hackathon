@@ -35,7 +35,7 @@ const SituationCard = ({ group, index }: SituationCardProps) => {
                   {group.icon}
                 </div>
                 <div className="flex-1 text-left min-w-0">
-                  <h3 className="font-display font-semibold text-foreground truncate">
+                  <h3 className="font-display font-semibold text-foreground leading-snug break-words whitespace-normal">
                     {group.title}
                   </h3>
                   <p className="text-sm text-muted-foreground">
