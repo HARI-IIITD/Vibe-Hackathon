@@ -4,8 +4,16 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { SituationGroup } from "@/data/vaccineData";
-import { Shield } from "lucide-react";
+import { Shield, Info } from "lucide-react";
 
 interface SituationCardProps {
   group: SituationGroup;
@@ -39,20 +47,92 @@ const SituationCard = ({ group, index }: SituationCardProps) => {
             <AccordionContent>
               <div className="px-5 pb-5 space-y-3">
                 {group.vaccines.map((vaccine, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-start gap-3 p-3 rounded-xl bg-accent/30"
-                  >
-                    <Shield className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                    <div>
-                      <p className="font-medium text-foreground text-sm">
-                        {vaccine.name}
-                      </p>
-                      <p className="text-xs text-muted-foreground mt-0.5">
-                        {vaccine.protectsAgainst}
-                      </p>
+                  <Dialog key={idx}>
+                    <div className="flex items-start gap-3 p-3 rounded-xl bg-accent/30">
+                      <Shield className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <div className="flex-1">
+                        <div className="flex items-center gap-2">
+                          <DialogTrigger asChild>
+                            <button className="font-medium text-foreground text-sm underline-offset-4 hover:underline text-left">
+                              {vaccine.name}
+                            </button>
+                          </DialogTrigger>
+                          <Info className="w-3 h-3 text-primary" />
+                        </div>
+                        <p className="text-xs text-muted-foreground mt-0.5">
+                          {vaccine.protectsAgainst}
+                        </p>
+                      </div>
                     </div>
-                  </div>
+
+                    <DialogContent>
+                      <DialogHeader>
+                        <DialogTitle>{vaccine.name}</DialogTitle>
+                        <DialogDescription>
+                          {vaccine.protectsAgainst}
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      <div className="space-y-3 text-sm">
+                        {(vaccine.route || vaccine.site) && (
+                          <div>
+                            <p className="font-semibold text-foreground">
+                              How is it given?
+                            </p>
+                            <p className="text-muted-foreground">
+                              {vaccine.route && <span>{vaccine.route}</span>}
+                              {vaccine.route && vaccine.site && <span> · </span>}
+                              {vaccine.site && <span>{vaccine.site}</span>}
+                            </p>
+                          </div>
+                        )}
+
+                        {vaccine.longTermBenefit && (
+                          <div>
+                            <p className="font-semibold text-foreground">
+                              Long-term benefit
+                            </p>
+                            <p className="text-muted-foreground">
+                              {vaccine.longTermBenefit}
+                            </p>
+                          </div>
+                        )}
+
+                        {vaccine.commonSideEffects && (
+                          <div>
+                            <p className="font-semibold text-foreground">
+                              Common, mild side effects
+                            </p>
+                            <p className="text-muted-foreground">
+                              {vaccine.commonSideEffects}
+                            </p>
+                          </div>
+                        )}
+
+                        {vaccine.whenToSeeDoctor && (
+                          <div>
+                            <p className="font-semibold text-foreground">
+                              When should you see a doctor?
+                            </p>
+                            <p className="text-muted-foreground">
+                              {vaccine.whenToSeeDoctor}
+                            </p>
+                          </div>
+                        )}
+
+                        {vaccine.riskIfNotTaken && (
+                          <div>
+                            <p className="font-semibold text-foreground">
+                              If the vaccine is not taken
+                            </p>
+                            <p className="text-muted-foreground">
+                              {vaccine.riskIfNotTaken}
+                            </p>
+                          </div>
+                        )}
+                      </div>
+                    </DialogContent>
+                  </Dialog>
                 ))}
               </div>
             </AccordionContent>

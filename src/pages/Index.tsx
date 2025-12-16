@@ -3,7 +3,6 @@ import HeroSection from "@/components/HeroSection";
 import AgeGroupCard from "@/components/AgeGroupCard";
 import SituationCard from "@/components/SituationCard";
 import FAQSection from "@/components/FAQSection";
-import VaccinationCenters from "@/components/VaccinationCenters";
 import Footer from "@/components/Footer";
 import { ageGroups, situationGroups } from "@/data/vaccineData";
 import { Calendar, Activity } from "lucide-react";
@@ -66,7 +65,6 @@ const Index = () => {
       </section>
 
       <FAQSection />
-      <VaccinationCenters />
       <Footer />
     </div>
   );
