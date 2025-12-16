@@ -1,0 +1,260 @@
+[
+  {
+    "hospital_name": "Sassoon General Hospital (B.J. Govt. Med. Coll.)",
+    "area": "Station Road / Agarkar Nagar",
+    "helpline": "02026128000",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Sassoon+General+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Jehangir Hospital",
+    "area": "Sasoon Road (near Pune Railway Station)",
+    "helpline": "02066819966",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Jehangir+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Poona Hospital & Research Centre",
+    "area": "Sadashiv Peth",
+    "helpline": "02066096000",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Poona+Hospital+&+Research+Centre+Pune"
+  },
+  {
+    "hospital_name": "Deenanath Mangeshkar Hospital",
+    "area": "Erandwane / Karve Nagar area",
+    "helpline": "02025433200",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Deenanath+Mangeshkar+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Ruby Hall Clinic",
+    "area": "Pune (Sassoon Road / Near Railway Station)",
+    "helpline": "02066057000",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Ruby+Hall+Clinic+Pune"
+  },
+  {
+    "hospital_name": "Sahyadri Hospital (Kothrud)",
+    "area": "Kothrud",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Sahyadri+Hospital+Kothrud+Pune"
+  },
+  {
+    "hospital_name": "Sahyadri Hospital (Hadapsar)",
+    "area": "Hadapsar",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Sahyadri+Hospital+Hadapsar+Pune"
+  },
+  {
+    "hospital_name": "ESI Hospital (Bibwewadi)",
+    "area": "Bibwewadi",
+    "helpline": "095204214112",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=ESI+Hospital+Bibwewadi+Pune"
+  },
+  {
+    "hospital_name": "Pune District Hospital / Pune Civil Hospital",
+    "area": "Civil Hospital Campus",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Pune+District+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Kamla Nehru Hospital",
+    "area": "Mangalwar Peth / Kasba Peth",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Kamla+Nehru+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Regional Mental Hospital (Vishrantwadi)",
+    "area": "Vishrantwadi / Phulenagar",
+    "helpline": "02026696804",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Regional+Mental+Hospital+Vishrantwadi+Pune"
+  },
+  {
+    "hospital_name": "Southern Command Hospital (Wanowrie)",
+    "area": "Wanowrie",
+    "helpline": "7507063567",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Southern+Command+Hospital+Wanowrie+Pune"
+  },
+  {
+    "hospital_name": "Surya Sahyadri Hospital",
+    "area": "Kasba Peth (near Shaniwar Wada)",
+    "helpline": "02067213900",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Surya+Sahyadri+Hospital+Kasba+Peth+Pune"
+  },
+  {
+    "hospital_name": "Aundh E.S.I.C Hospital",
+    "area": "Telco Road / Near Chinchwad Railway Station",
+    "helpline": "027462514",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Aundh+ESIC+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Aundh Government Hospital",
+    "area": "Aundh (Vidyapeeth Rd)",
+    "helpline": "02027280237",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Aundh+Government+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Dr Bandorawalla Government Leprosy Hospital",
+    "area": "Kondhwa Bk",
+    "helpline": "02026686954",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Dr+Bandorawalla+Leprosy+Hospital+Kondhwa+Pune"
+  },
+  {
+    "hospital_name": "Officer Family Ward Command Hospital",
+    "area": "Pune Cantonment",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Officer+Family+Ward+Command+Hospital+Pune+Cantonment"
+  },
+  {
+    "hospital_name": "Savitribai Phule Prsuti Graha",
+    "area": "Guruwar Peth",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Savitribai+Phule+Prsuti+Graha+Pune"
+  },
+  {
+    "hospital_name": "Late Premchand Oswal Hospital (PMC)",
+    "area": "Bibwewadi / Indiranagar area",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Premchand+Oswal+Hospital+Pune"
+  },
+  {
+    "hospital_name": "PMC Hospital Sainagar",
+    "area": "Sainagar (PMC)",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=PMC+Hospital+Sainagar+Pune"
+  },
+  {
+    "hospital_name": "Jupiter Hospital (Kharadi / Wagholi)",
+    "area": "Kharadi / Wagholi",
+    "helpline": "02067180000",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Jupiter+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Apex Hospital",
+    "area": "Pune (Pawar Nagar area)",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Apex+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Aundh Hospital / Urban Health Centre",
+    "area": "Aundh",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Aundh+Urban+Health+Centre+Pune"
+  },
+  {
+    "hospital_name": "KEM Hospital (private nursing home listings)",
+    "area": "Various / Pimple Saudagar area",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=KEM+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Grant Medical Foundation / Bharati Hospital",
+    "area": "Pune",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Bharati+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Lokmanya Hospital",
+    "area": "Sinhagad Road / Kondhwa area",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Lokmanya+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Shraddha Hospital",
+    "area": "Pune",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Shraddha+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Aditya Birla Memorial Hospital",
+    "area": "Pune",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Aditya+Birla+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Nagpur Road / Rural Health Centre listings (PMC)",
+    "area": "Pune suburbs",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Rural+Health+Centre+Pune"
+  },
+  {
+    "hospital_name": "Seth Ramdas Shah Memorial Hospital",
+    "area": "Yerwada / Sainik Nagar vicinity",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Seth+Ramdas+Shah+Memorial+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Yash Hospital (Hadapsar area)",
+    "area": "Hadapsar",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Yash+Hospital+Hadapsar+Pune"
+  },
+  {
+    "hospital_name": "Roseland Hospital",
+    "area": "Pimple Saudagar / Residency Road",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Roseland+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Sainath Hospital",
+    "area": "Pune",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Sainath+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Siddharth Hospital",
+    "area": "Pune",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Siddharth+Hospital+Pune"
+  },
+  {
+    "hospital_name": "City-based Urban Health Centre (PMC list)",
+    "area": "Various Pune wards",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Urban+Health+Centre+Pune"
+  },
+  {
+    "hospital_name": "Poona Hospital — Maternity & Surgical",
+    "area": "Erandwane / Aundh region",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Poona+Maternity+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Mangalwar Peth Primary Health Centre",
+    "area": "Mangalwar Peth",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Mangalwar+Peth+PHC+Pune"
+  },
+  {
+    "hospital_name": "Smt. Kamla Nehru Government Hospital",
+    "area": "Kasba Peth",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Kamla+Nehru+Government+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Apex Multispeciality / Private clinics",
+    "area": "Multiple",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Apex+Multispeciality+Hospital+Pune"
+  },
+  {
+    "hospital_name": "Columbia Asia Hospital",
+    "area": "Hadapsar",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Columbia+Asia+Hospital+Hadapsar+Pune"
+  },
+  {
+    "hospital_name": "Jehangir Specialty Clinics",
+    "area": "Multiple Pune localities",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=Jehangir+Clinic+Pune"
+  },
+  {
+    "hospital_name": "Bharti / B. J. Government Medical College",
+    "area": "Near Railway Station / Sassoon Road",
+    "helpline": "02026102200",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=BJ+Government+Medical+College+Pune"
+  },
+  {
+    "hospital_name": "Municipal Dispensary / PHC (PMC list)",
+    "area": "Multiple Pune wards",
+    "helpline": "",
+    "location_link": "https://www.google.com/maps/search/?api=1&query=PMC+Dispensary+Pune"
+  }
+]
