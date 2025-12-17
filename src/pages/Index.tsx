@@ -15,8 +15,8 @@ const Index = () => {
 
       {/* Main Content - Two Columns */}
       <section className="py-16 px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-[0.9fr_2.6fr] gap-10">
+        <div className="max-w-[90rem] mx-auto">
+          <div className="grid lg:grid-cols-[3fr_3fr] gap-10">
             {/* Age-Wise Vaccines */}
             <div className="bg-card rounded-2xl border border-border/50 p-6">
               <div className="flex items-center gap-3 mb-6">
@@ -32,10 +32,17 @@ const Index = () => {
                   </p>
                 </div>
               </div>
-              <div className="space-y-3">
-                {ageGroups.map((group, index) => (
-                  <AgeGroupCard key={group.id} group={group} index={index} />
-                ))}
+              <div className="grid md:grid-cols-2 gap-3">
+                <div className="space-y-3">
+                  {ageGroups.slice(0, Math.ceil(ageGroups.length / 2)).map((group, index) => (
+                    <AgeGroupCard key={group.id} group={group} index={index} />
+                  ))}
+                </div>
+                <div className="space-y-3">
+                  {ageGroups.slice(Math.ceil(ageGroups.length / 2)).map((group, index) => (
+                    <AgeGroupCard key={group.id} group={group} index={index + Math.ceil(ageGroups.length / 2)} />
+                  ))}
+                </div>
               </div>
             </div>
 
