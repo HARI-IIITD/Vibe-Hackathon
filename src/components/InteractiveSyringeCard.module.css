@@ -1,0 +1,575 @@
+/* Syringe Container */
+.syringeContainer {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  margin: 0;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.syringeContainer:hover {
+  transform: scale(1.02);
+}
+
+.syringeContainer:active {
+  transform: scale(0.98);
+}
+
+/* Syringe Barrel */
+.syringeBarrel {
+  position: relative;
+  width: 65%;
+  max-width: 100%;
+  height: 160px;
+  background: linear-gradient(to bottom, #ffffff 0%, #f8f8f8 50%, #f0f0f0 100%);
+  border: 4px solid #4a5568;
+  border-radius: 12px 4px 4px 12px;
+  margin: 30px auto;
+  overflow: visible;
+  box-shadow: 
+    inset 0 0 0 1px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 8px rgba(0, 0, 0, 0.1),
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Measurement markings on syringe barrel */
+.syringeBarrel::before {
+  content: '';
+  position: absolute;
+  left: 2px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 12px,
+    #9ca3af 12px,
+    #9ca3af 13px,
+    transparent 13px,
+    transparent 25px
+  );
+  z-index: 1;
+  opacity: 0.6;
+}
+
+.syringeBarrel::after {
+  content: '';
+  position: absolute;
+  right: 2px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 12px,
+    #9ca3af 12px,
+    #9ca3af 13px,
+    transparent 13px,
+    transparent 25px
+  );
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Liquid inside barrel */
+.syringeLiquid {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  right: 4px;
+  bottom: 4px;
+  width: calc(100% - 8px);
+  height: calc(100% - 8px);
+  background: linear-gradient(to bottom, hsl(195, 80%, 75%) 0%, hsl(195, 70%, 85%) 100%);
+  transform-origin: right center;
+  transition: 
+    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: hsl(195, 50%, 25%);
+  font-size: 10px;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 600;
+  border-radius: 8px 2px 2px 8px;
+  box-shadow: inset 0 0 10px rgba(125, 211, 252, 0.3);
+}
+
+.syringeLiquid.active {
+  /* Empty the barrel by shrinking the liquid instead of sliding it out */
+  transform: scaleX(0);
+}
+
+.liquidVaccineName {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.liquidDescription {
+  font-size: 14px;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  line-height: 1.4;
+}
+
+/* Plunger */
+.syringePlunger {
+  position: absolute;
+  left: -55px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: calc(100% - 16px);
+  background: linear-gradient(to bottom, 
+    #f8fafc 0%, 
+    #e2e8f0 15%, 
+    #cbd5e0 50%, 
+    #a0aec0 85%, 
+    #718096 100%);
+  border: 3px solid #4a5568;
+  border-right: none;
+  border-radius: 10px 0 0 10px;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 5;
+  box-shadow: 
+    -4px 0 10px rgba(0, 0, 0, 0.5),
+    inset 3px 0 6px rgba(255, 255, 255, 0.4),
+    inset -1px 0 2px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* Rubber plunger tip inside barrel - more realistic */
+.syringePlunger::before {
+  content: '';
+  position: absolute;
+  right: -8px;
+  top: 8px;
+  bottom: 8px;
+  width: 28px;
+  background: radial-gradient(ellipse at center,
+    #1a202c 0%,
+    #2d3748 30%,
+    #1a202c 60%,
+    #0f172a 100%);
+  border-radius: 18px 0 0 18px;
+  box-shadow: 
+    inset -3px 0 8px rgba(0, 0, 0, 0.6),
+    inset 2px 0 3px rgba(255, 255, 255, 0.1),
+    0 0 2px rgba(0, 0, 0, 0.3),
+    inset 0 0 0 1px rgba(0, 0, 0, 0.4);
+  z-index: 6;
+  display: block !important;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.plungerHandle {
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 140px;
+  background: radial-gradient(ellipse at center,
+    #ffffff 0%,
+    #f7fafc 20%,
+    #e2e8f0 50%,
+    #cbd5e0 80%,
+    #a0aec0 100%);
+  border: 4px solid #4a5568;
+  border-right: 3px solid #718096;
+  border-radius: 18px 12px 12px 18px;
+  box-shadow: 
+    -5px 0 14px rgba(0, 0, 0, 0.7),
+    inset 3px 0 6px rgba(255, 255, 255, 0.5),
+    inset -2px 0 4px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.2) inset,
+    -2px 0 4px rgba(0, 0, 0, 0.3);
+  z-index: 7;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  transition:
+    left 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Connection ring between handle and plunger rod */
+.plungerHandle::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 14px;
+  background: linear-gradient(to right, #718096 0%, #4a5568 100%);
+  border-radius: 0 6px 6px 0;
+  box-shadow: 
+    inset -2px 0 3px rgba(0, 0, 0, 0.4),
+    1px 0 2px rgba(0, 0, 0, 0.2);
+  z-index: 8;
+}
+
+/* Plunger handle grip lines */
+.plungerHandle::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  bottom: 8px;
+  width: 20px;
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0px,
+    transparent 1.5px,
+    rgba(74, 85, 104, 0.4) 1.5px,
+    rgba(74, 85, 104, 0.4) 2.5px,
+    transparent 2.5px,
+    transparent 4px
+  );
+  border-radius: 2px;
+  box-shadow: 
+    inset 0 1px 2px rgba(0, 0, 0, 0.2),
+    inset 0 -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* When the plunger is pushed, visually "compress" the handle instead of sliding it into the barrel */
+.syringePlunger.active .plungerHandle {
+  left: -25px; /* move closer to the barrel */
+  width: 45px; /* slightly shorter handle to suggest compression */
+}
+
+/* Needle Hub (connects barrel to needle) */
+.syringeNeedle {
+  position: absolute;
+  left: calc(50% + 32.5%);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 90px;
+  height: 16px;
+  z-index: 4;
+}
+
+/* Needle hub base */
+.syringeNeedle::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 16px;
+  background: linear-gradient(to right, #e2e8f0 0%, #cbd5e0 100%);
+  border: 2px solid #4a5568;
+  border-radius: 0 6px 6px 0;
+  box-shadow: 2px 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Needle shaft */
+.syringeNeedle::after {
+  content: '';
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 72px;
+  height: 3px;
+  background: linear-gradient(to right, #cbd5e0 0%, #718096 50%, #4a5568 100%);
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .syringeNeedle {
+    width: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .syringeNeedle {
+    width: 60px;
+  }
+}
+
+.needleTip {
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 6px solid #2d3748;
+  filter: drop-shadow(1px 0 1px rgba(0, 0, 0, 0.5));
+}
+
+/* Liquid drop animation */
+.liquidDrop {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: hsl(195, 80%, 75%);
+  border-radius: 50%;
+  opacity: 0;
+  z-index: 4;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translate(-50%, -50%);
+}
+
+.liquidDrop.active {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* Popup Backdrop */
+.popupBackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999998;
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.popupBackdrop.backdropActive {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  transition: opacity 0.3s ease, visibility 0s 0s;
+}
+
+/* Popup Bubble */
+.popupBubble {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center center;
+  width: 90%;
+  max-width: 500px;
+  max-height: 85vh;
+  background: linear-gradient(135deg, hsl(var(--card)) 0%, hsl(var(--accent)) 100%);
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  overflow-y: auto;
+  z-index: 999999;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease, visibility 0s 0.5s;
+  pointer-events: none;
+  border: 1px solid hsl(var(--border));
+  visibility: hidden;
+  isolation: isolate;
+}
+
+.popupBubble.active {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  pointer-events: all;
+  visibility: visible;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.5s ease, visibility 0s 0s;
+}
+
+.popupContent {
+  padding: 32px;
+  padding-top: 50px;
+}
+
+.closeButton {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  background: hsl(var(--muted));
+  border: 2px solid hsl(var(--border));
+  border-radius: 50%;
+  font-size: 20px;
+  color: hsl(var(--muted-foreground));
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.closeButton:hover {
+  background: hsl(var(--accent));
+  color: hsl(var(--foreground));
+  transform: rotate(90deg);
+}
+
+.closeButton:active {
+  transform: rotate(90deg) scale(0.9);
+}
+
+.popupTitle {
+  font-size: 28px;
+  font-weight: 700;
+  color: hsl(var(--foreground));
+  margin-bottom: 24px;
+  text-align: center;
+  letter-spacing: 2px;
+  font-family: var(--font-display);
+}
+
+.infoSection {
+  margin-bottom: 24px;
+}
+
+.infoSection h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: hsl(var(--primary));
+  margin-bottom: 8px;
+  font-family: var(--font-display);
+}
+
+.infoSection p {
+  font-size: 15px;
+  color: hsl(var(--muted-foreground));
+  line-height: 1.7;
+  font-family: var(--font-body);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .syringeContainer {
+    width: 100%;
+    height: 220px;
+    margin: 0;
+  }
+
+  .syringeBarrel {
+    width: 60%;
+    max-width: 100%;
+    height: 180px;
+  }
+
+  .liquidVaccineName {
+    font-size: 18px;
+  }
+
+  .liquidDescription {
+    font-size: 13px;
+  }
+
+  .syringeNeedle {
+    left: calc(50% + 30%);
+    width: 70px;
+  }
+
+
+  .popupBubble {
+    width: 85%;
+    max-width: 450px;
+    max-height: 90vh;
+  }
+  
+
+  .popupContent {
+    padding: 24px;
+    padding-top: 45px;
+  }
+
+  .popupTitle {
+    font-size: 24px;
+  }
+
+  .infoSection h3 {
+    font-size: 16px;
+  }
+
+  .infoSection p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .syringeContainer {
+    width: 100%;
+    height: 180px;
+    margin: 0;
+  }
+  
+  .popupBubble {
+    width: 90%;
+    max-width: calc(100vw - 40px);
+    transform: translate(-50%, -50%) scale(0);
+  }
+  
+  .popupBubble.active {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  .syringeBarrel {
+    width: 85%;
+    max-width: 100%;
+    height: 100px;
+  }
+
+  .liquidVaccineName {
+    font-size: 16px;
+  }
+
+  .liquidDescription {
+    font-size: 12px;
+  }
+
+  .syringeNeedle {
+    left: calc(50% + 30%);
+    width: 60px;
+  }
+
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .syringeLiquid,
+  .syringePlunger,
+  .liquidDrop,
+  .popupBubble {
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for accessibility */
+.syringeContainer:focus-visible,
+.closeButton:focus-visible {
+  outline: 3px solid hsl(var(--primary));
+  outline-offset: 4px;
+}
+
